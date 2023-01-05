@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    background: linear-gradient(to right, #d992db, #6ba8da);
+}
+
+.card{
+    margin-bottom:20px;
+    border:none;
+}
+
+.box {
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #f1f1f1;
+    text-align: center;
+    transition: 0.25s;
+    margin-top: 100px
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #6ba8da;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    transition: 0.25s
+}
+
+.box h1 {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 300px;
+    border-color: #c7a6d6
+}
+
+.box button[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #c7a6d6;
+    padding: 14px 40px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+.box button[type="submit"]:hover {
+    background: #4f3b58
+}
+
+.forgot {
+    text-decoration: underline
+}
+.logo-badge {
+    color: #080707;
+    font-size: 80px;
+    font-weight: 800;
+    letter-spacing: -10px;
+    margin-bottom: 0;
+}
