@@ -10,32 +10,28 @@
             <thead class="thead-light">
                 <tr>
                     <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Tipo de Usuario </th>
-                    <th>Rol </th>
-                    <th>DUI</th>
-                    <th>Telefono </th>
-                    <th>Correo Electronico</th>
-                    <th> Fecha de Nacimiento </th>
+                    <th>Asunto</th>
+                    <th>Paciente</th>
+                    <th>Descripción </th>
+                    <th>Fecha Cita</th>
+                    <th>Estado</th>
                     <th>Acciones </th>
                 </tr>
             </thead>
             <tbody>
 
-            <?php foreach($usuarios as $usuario): ?>
+            <?php foreach($citas as $cita): ?>
 
 
                 <tr>
-                    <td><?=$usuario['IdUsuario']; ?></td>
-                    <td><?=$usuario['NombreUsuario']; ?></td>
-                    <td><?=$usuario['Usuario']; ?> </td>
-                    <td><?=$usuario['IdRol']?></td>
-                    <td><?=$usuario['DuiUsuario']; ?> </td>
-                    <td><?=$usuario['TelUsuario']; ?> </td>
-                    <td><?=$usuario['CorreoUsuario']; ?> </td>
-                    <td><?=$usuario['FechaNacimiento']; ?> </td>
-                    <td><a href="<?=base_url('usuario/editar/'.$usuario['IdUsuario']);?>" class="btn btn-primary" type="button">Editar</button> 
-                    <a href="<?=base_url('usuario/borrar/'.$usuario['IdUsuario']);?>" class="btn btn-danger" type="button">Borrar</button>
+                    <td><?=$cita['IdCita']; ?></td>
+                    <td><?=$cita['AsuntoCit']; ?></td>              
+                    <td><?=$cita['IdPaciente']; ?> </td>
+                    <td><?=$cita['NotaCit']; ?> </td>
+                    <td><?=$cita['FechaCit']?></td>
+                    <td><?=$cita['Estado']; ?> </td>
+                    <td><a href="<?=base_url('cita/editar/'.$cita['IdCita']);?>" class="btn btn-primary" type="button">Editar</button> 
+                    <a href="<?=base_url('cita/borrar/'.$cita['IdCita']);?>" class="btn btn-danger" type="button">Borrar</button>
                     </td>
                 </tr>
                 <?php endforeach; ?>

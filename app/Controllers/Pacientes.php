@@ -17,8 +17,8 @@ class Pacientes extends Controller
         $municipios = model('MunicipiosM');
         $datos['pacientes']= $paciente->orderBy('IdPaciente','ASC')->paginate(10);
         
-        $datos['departamentos'] = $departamentos→findAll();
-        $datos['municipios'] = $municipios→findAll();
+        $datos['departamentos'] = $departamentos->findAll();
+        $datos['municipios'] = $municipios->findAll();
         $datos['cabecera']= view('template/cabecera');
         $datos['piepagina']= view('template/piepagina');
 
@@ -29,8 +29,8 @@ class Pacientes extends Controller
     {
         $departamentos = model('DepartamentosM');
         $municipios = model('MunicipiosM');
-        $datos['departamentos'] = $departamentos→findAll();
-        $datos['municipios'] = $municipios→findAll();
+        $datos['departamentos'] = $departamentos->findAll();
+        $datos['municipios'] = $municipios->findAll();
         $datos['cabecera']= view('template/cabecera');
         $datos['pie']= view('template/piepagina');
 
