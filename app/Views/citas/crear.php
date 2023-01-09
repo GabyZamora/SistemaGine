@@ -9,8 +9,6 @@ Crear nueva cita
         <p class="card-text">
             
         <form method="post" action="<?=site_url('cita/guardar')?>" enctype="multipart/form-data">
-
-
         <div class="form-group">
             <label for="AsuntoCit">Asunto de la cita</label>
             <input id="AsuntoCit" class="form-control" type="text" name="AsuntoCit">
@@ -20,7 +18,7 @@ Crear nueva cita
             <select id="paciente" class="form-control" id="paciente" name="paciente" size="1">
                 <option value="0">Seleccione...</option>
                 <?php foreach($pacientes as $paciente): ?>
-                    <option value="<?=$paciente->IdRol?>"><?=$paciente->NombrePac?></option>
+                    <option value="<?=$paciente['IdPaciente']?>"><?=$paciente['NombrePac']?></option>
                 <?php endforeach?>
             </select>
         </div>
@@ -37,7 +35,7 @@ Crear nueva cita
             <select id="estado" class="form-control" id="estado" name="estado" size="1">
                 <option value="0">Seleccione...</option>
                 <?php foreach($estados as $estado): ?>
-                    <option value="<?=$estado->IdRol?>"><?=$estado->NombreEstado?></option>
+                    <option value="<?=$estado['IdEstado']?>"><?=$estado['NombreEstado']?></option>
                 <?php endforeach?>
             </select>
         </div>
@@ -46,7 +44,7 @@ Crear nueva cita
             <select id="pago" class="form-control" id="pago" name="pago" size="1">
                 <option value="0">Seleccione...</option>
                 <?php foreach($pagos as $pago): ?>
-                    <option value="<?=$pago->IdRol?>"><?=$pago->NombrePag?></option>
+                    <option value="<?=$pago['IdPago']?>"><?=$pago['NombrePag']?></option>
                 <?php endforeach?>
             </select>
         </div>
@@ -55,19 +53,16 @@ Crear nueva cita
             <select id="servicio" class="form-control" id="servicio" name="servicio" size="1">
                 <option value="0">Seleccione...</option>
                 <?php foreach($servicios as $servicio): ?>
-                    <option value="<?=$servicio->IdRol?>"><?=$servicio->NombreSer?></option>
+                    <option value="<?=$servicio['IdServicio']?>"><?=$servicio['NombreSer']?></option>
                 <?php endforeach?>
             </select>
         </div>
+        <button class="btn btn-success" type="submit">Guardar</button>
+        </form>
 
-        <div>
+            </p>
+        </div>
     </div>
-        <button class="btn btn-success" type="summit">Guardar</button>
-        </p>
-    </div>
-</div>
 
-
-</form>
 
 <?$pie?>

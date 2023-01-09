@@ -15,7 +15,8 @@ class Citas extends Controller
 
     public function index()
     {
-        $cita= new CitasM();
+        
+        $cita = new CitasM();
         $servicios = model('ServiciosM');
         $pacientes = model('PacientesM');
         $pagos = model('PagosM');

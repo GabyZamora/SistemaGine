@@ -54,19 +54,19 @@ $routes->get('/citas/borrar/(:num)', 'Citas::borrar/$1');
 $routes->get('/citas/editar/(:num)', 'Citas::editar/$1');
 $routes->post('/citas/actualizar', 'Citas::actualizar');
 //pacientes
-$routes->get('pacientes/listar', 'Pacientes::index');
-$routes->get('pacientes/crear', 'Pacientes::crear');
-$routes->post('pacientes/guardar', 'Pacientes::guardar');
-$routes->get('pacientes/borrar/(:num)', 'Pacientes::borrar/$1');
-$routes->get('pacientes/editar/(:num)', 'Pacientes::editar/$1');
-$routes->post('pacientes/actualizar', 'Pacientes::actualizar');
+$routes->get('/pacientes/listar', 'Pacientes::index');
+$routes->get('/pacientes/crear', 'Pacientes::crear');
+$routes->post('/pacientes/guardar', 'Pacientes::guardar');
+$routes->get('/pacientes/borrar/(:num)', 'Pacientes::borrar/$1');
+$routes->get('/pacientes/editar/(:num)', 'Pacientes::editar/$1');
+$routes->post('/pacientes/actualizar', 'Pacientes::actualizar');
 //Pagos
-$routes->get('pagos/listar', 'Pagos::index');
-$routes->get('pagos/crear', 'Pagos::crear');
-$routes->post('pagos/guardar', 'Pagos::guardar');
-$routes->get('pagos/borrar/(:num)', 'Pagos::borrar/$1');
-$routes->get('pagos/editar/(:num)', 'Pagos::editar/$1');
-$routes->post('pagos/actualizar', 'Pagos::actualizar');
+$routes->get('/pagos/listar', 'Pagos::index');
+$routes->get('/pagos/crear', 'Pagos::crear');
+$routes->post('/pagos/guardar', 'Pagos::guardar');
+$routes->get('/pagos/borrar/(:num)', 'Pagos::borrar/$1');
+$routes->get('/pagos/editar/(:num)', 'Pagos::editar/$1');
+$routes->post('/pagos/actualizar', 'Pagos::actualizar');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

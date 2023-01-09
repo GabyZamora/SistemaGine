@@ -13,12 +13,11 @@ class Pacientes extends Controller
     public function index()
     {
         $paciente= new PacientesM();
-        $departamentos = model('DepartamentosM');
-        $municipios = model('MunicipiosM');
+        $model = model('DepartamentosM');
+        $models = model('MunicipiosM');
         $datos['pacientes']= $paciente->orderBy('IdPaciente','ASC')->paginate(10);
         
-        $datos['departamentos'] = $departamentos->findAll();
-        $datos['municipios'] = $municipios->findAll();
+
         $datos['cabecera']= view('template/cabecera');
         $datos['piepagina']= view('template/piepagina');
 
@@ -27,10 +26,10 @@ class Pacientes extends Controller
 
     public function crear()
     {
-        $departamentos = model('DepartamentosM');
-        $municipios = model('MunicipiosM');
-        $datos['departamentos'] = $departamentos->findAll();
-        $datos['municipios'] = $municipios->findAll();
+        $model = model('DepartamentosM');
+        $models = model('MunicipiosM');
+        $datos['departamentos'] = $model->findAll();
+        $datos['municipios'] = $models->findAll();
         $datos['cabecera']= view('template/cabecera');
         $datos['pie']= view('template/piepagina');
 
@@ -41,13 +40,13 @@ class Pacientes extends Controller
     {
         $paciente = new PacientesM();
         $datos=[
-            'NombrePac'=> $this->request->getVar('NombrePac'),
-            'DuiPac'=> $this->request->getVar('DuiPac'),
-            'TelPac'=> $this->request->getVar('TelPac'),
-            'CorreoPac'=> $this->request->getVar('CorreoPac'),
-            'FechaNacPac'=> $this->request->getVar('FechaNacPac'),
-            'IdDepartamento'=> $this->request->getVar('IdDepartamento'),
-            'IdMunicipio'=> $this->request->getVar('IdMunicipio')
+            'NombrePac'=> $this->request->getVar('nombre'),
+            'DuiPac'=> $this->request->getVar('dui'),
+            'TelPac'=> $this->request->getVar('telefono'),
+            'CorreoPac'=> $this->request->getVar('correo'),
+            'FechaNacPac'=> $this->request->getVar('fnacimiento'),
+            'IdDepartamento'=> $this->request->getVar('departamento'),
+            'IdMunicipio'=> $this->request->getVar('municipio')
         ];
 
         $paciente->insert($datos);

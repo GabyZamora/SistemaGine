@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CitaModel extends Model
+class CitasM extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'cita';
